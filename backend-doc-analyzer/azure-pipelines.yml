@@ -1,0 +1,35 @@
+# Docker
+# Build a Docker image
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+  - development
+
+resources:
+  - repo: self
+
+variables:
+  tag: "$(Build.BuildId)"
+  imageName: "genbotapidocanalyzer"
+
+stages:
+  - stage: Build
+    displayName: Build image
+    jobs:
+      - job: Build
+        displayName: Build
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - task: DockerInstaller@0
+            displayName: Install Docker 17.09.0-ce
+            inputs:
+              dockerVersion: "17.09.0-ce"
+          - powershell: |
+              docker build . -t $(imageName):$(tag)
+              docker image save $(imageName):$(tag) -o $(Build.ArtifactStagingDirectory)/$(imageName).tar
+          - task: PublishBuildArtifacts@1
+            displayName: Publish image and deployment files
+            inputs:
+              PathtoPublish: "$(Build.ArtifactStagingDirectory)"
+              ArtifactName: "drop"

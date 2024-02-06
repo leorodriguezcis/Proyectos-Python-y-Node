@@ -1,0 +1,36 @@
+# Archivos/directorios generados por el entorno de desarrollo
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Archivos de registros y registros de depuración
+*.log
+logs/
+*.swp
+
+# Directorio virtualenv
+venv/
+.venv/
+
+# Archivos/directorios específicos de control de versiones (Git, por ejemplo)
+.git/
+.gitignore
+
+# Dependencias de desarrollo
+tests/
+docs/
+*.md
+
+#Misceláneo
+.coverage
+.env.bat
+audio_empty.wav
+azure-pipelines.yml
+coverage.xml
+pytest.ini
+dockerfile
+docker-compose.yml
+dockerignore

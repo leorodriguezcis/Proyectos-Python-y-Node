@@ -1,0 +1,9 @@
+#create docker ignore por nestjs production
+.eslintrc.js
+.gitignore
+.prettierrc
+dockerfile
+.dockerignore
+README.md
+.vscode
+

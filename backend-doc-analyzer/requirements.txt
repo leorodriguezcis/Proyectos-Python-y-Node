@@ -1,0 +1,25 @@
+celery==5.3.1
+redis==4.6.0
+fastapi==0.95.2
+uvicorn[all]==0.18.3
+azure-storage-blob == 12.14.1
+azure-ai-formrecognizer == 3.2.1
+python-dotenv == 1.0.0
+openai==0.27.4
+pandas==1.5.1
+Pillow==9.5.0
+scipy==1.10.1
+azure-cognitiveservices-speech==1.24.0
+tiktoken==0.4.0
+python-multipart == 0.0.5
+python-docx == 0.8.11
+SQLAlchemy == 2.0.20
+pymssql == 2.2.8
+pyodbc == 4.0.39
+tenacity == 8.2.3
+SQLAlchemy-Utils == 0.41.1
+chromadb==0.4.16
+pysqlite3-binary
+langchain
+pypdf
+sentence-transformers==2.2.1
